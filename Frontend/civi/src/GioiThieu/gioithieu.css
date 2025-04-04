@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Giảm khoảng cách giữa ảnh và nội dung */
+    padding: 20px;
+}
+
+.container > div {
+    flex: 1; /* Chia đều không gian */
+    max-width: 500px; /* Giới hạn chiều rộng của phần văn bản */
+}
+
+.container img {
+    max-width: 300px; /* Giảm kích thước ảnh */
+    height: auto;
+}
+
+.text-content {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-content h1 {
+    text-align: center;
+    font-size: 16px;
+    color: #382A9C;
+    font-weight: bold;
+}
+
+.text-content p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+div .flex-col img {  
+    transition: transform 0.3s ease-in-out;
+}
+
+div .flex-col:hover img {
+    transform: scale(1.2); /* Phóng to 1.2 lần */
+}

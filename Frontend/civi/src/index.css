@@ -18,7 +18,7 @@ header {
   display: flex;
   align-items: center;
   padding: 12px 32px;
-  background-color: white;
+  background-color: rgb(246, 241, 241);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -35,7 +35,7 @@ header img {
   display: flex;
   align-items: center;
   padding: 12px 32px;
-  background-color: white;
+  background-color: rgb(224, 215, 215);
   flex-direction: column;
 }
 .menu{
@@ -72,23 +72,29 @@ ul li:hover {
 
 /* --- Login Button --- */
 button {
-  background-color: rgb(5, 65, 137);
+  width: 100%;
+  background: linear-gradient(135deg, #ea0f51, #2575fc); /* Hiệu ứng màu gradient */
   color: white;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-size: 14px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px; /* Bo góc đẹp hơn */
+  font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  border: none;
-  transition: background 0.3s ease;
-  margin-top: 2px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+  text-transform: uppercase; /* Chữ in hoa */
+  letter-spacing: 1px;
 }
 
 button:hover {
-  background: #333;
-}
+background: linear-gradient(135deg, #2575fc, #6a11cb); /* Đổi hướng màu khi hover */
+  transform: scale(1.05); /* Hiệu ứng phóng to nhẹ */}
 
 /* --- Hero Section --- */
+.div mau{
+  background: #2618b6;
+}
 .hero-section {
   display: flex;
   flex-direction: column;
@@ -100,6 +106,7 @@ button:hover {
   .hero-section {
       flex-direction: row;
       padding: 4rem 2rem;
+
   }
 }
 
@@ -139,7 +146,7 @@ button:hover {
 
 /* --- Footer --- */
 footer {
-  background: #e5e7eb;
+  background: #92969d;
   padding: 20px 40px;
   font-size: 14px;
   color: #333;

@@ -1,0 +1,52 @@
+/* Định dạng chung cho toàn bộ danh sách khóa học */
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 90%;
+}
+
+/* Định dạng cho nội dung khóa học */
+.max-w-lg {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.max-w-lg ul {
+    font-size: 18px;
+    font-weight: bold;
+    color: #004085;
+}
+
+.max-w-lg ul li {
+    font-weight: normal;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Định dạng cho hình ảnh khóa học */
+.anh img {
+    width: 200px;
+    height: 120px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+    section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .max-w-lg {
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+}

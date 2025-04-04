@@ -1,0 +1,133 @@
+/* --- Footer Styles --- */
+footer {
+    background: #92969d;
+    padding: 20px 40px;
+    font-size: 14px;
+    color: #fff; /* Đổi sang màu trắng để dễ đọc hơn */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center; /* Căn giữa nội dung */
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between; /* Căn đều các cột */
+        text-align: left;
+    }
+}
+
+/* Cột trong footer */
+.ab, .cd, .bc {
+    flex: 1; 
+}
+
+/* Tiêu đề danh mục */
+footer h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Nội dung danh mục */
+footer p {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Căn giữa icon với chữ */
+    margin: 8px 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    footer p {
+        justify-content: flex-start;
+    }
+}
+
+/* Hover effect */
+footer p:hover {
+    color: #f9c74f;
+    transform: scale(1.05);
+}
+
+/* Icon trong footer */
+footer svg {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+/* --- Responsive Section --- */
+section {
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    section {
+        flex-direction: row;
+    }
+}
+
+/* Nội dung bên trái */
+section .left {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    section .left {
+        width: 50%;
+        text-align: left;
+        margin-bottom: 0;
+    }
+}
+
+/* Tiêu đề chính */
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #422dce;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2618b6;
+    margin-bottom: 1rem;
+}
+
+/* Danh sách bullet */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Hình ảnh bên phải */
+section .right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    section .right {
+        width: 50%;
+        margin-top: 0;
+    }
+}

@@ -1,76 +1,40 @@
 import React, { useState } from "react";
-import axios from "axios";
-import "./Auth.css";
+import "./giaodienReg.css";
 
 const Register = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    password: ""
-  });
   const [message, setMessage] = useState("");
-  const [error, setError] = useState("");
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const response = await axios.post("http://localhost:5000/api/auth/register", formData);
-      setMessage(response.data.message);
-      setError("");
-    } catch (err) {
-      setError(err.response?.data?.error || "Có lỗi xảy ra khi đăng ký");
-      setMessage("");
-    }
+    setMessage("Đăng ký thành công! Hãy đăng nhập.");
   };
 
   return (
-    <div className="container">
-      <h2>Đăng ký</h2>
-      {message && <div className="alert success">{message}</div>}
-      {error && <div className="alert error">{error}</div>}
-      <form onSubmit={handleSubmit}>
-        <label>Tên người dùng</label>
-        <input 
-          type="text" 
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          placeholder="Nhập tên người dùng" 
-          required 
-        />
-
-        <label>Email</label>
-        <input 
-          type="email" 
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          placeholder="Nhập email" 
-          required 
-        />
-
-        <label>Mật khẩu</label>
-        <input 
-          type="password" 
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-          placeholder="Nhập mật khẩu" 
-          required 
-        />
-
-        <button type="submit">Đăng ký</button>
-      </form>
-      <p>
-        Đã có tài khoản? <a href="/login">Đăng nhập</a>
-      </p>
+    <div className="register-page">
+      <div className="register-container">
+        <div className="register-card">
+          <h2 className="register-title">Đăng ký</h2>
+          {message && <div className="register-alert">{message}</div>}
+          <form onSubmit={handleSubmit}>
+            <div className="input-group">
+              <label className="input-label">Tên người dùng</label>
+              <input className="input-field" type="text" placeholder="Nhập tên người dùng" required />
+            </div>
+            <div className="input-group">
+              <label className="input-label">Email</label>
+              <input className="input-field" type="email" placeholder="Nhập email" required />
+            </div>
+            <div className="input-group">
+              <label className="input-label">Mật khẩu</label>
+              <input className="input-field" type="password" placeholder="Nhập mật khẩu" required />
+            </div>
+            <button className="register-button" type="submit">Đăng ký</button>
+          </form>
+          <p className="register-text">
+            Đã có tài khoản? <a href="/login" className="register-link">Đăng nhập ngay</a>
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
