@@ -84,4 +84,121 @@
   .course-card .cta-button:hover {
     background-color: #f0a500;
   }
+/* --- Blog Section --- */
+.blog-section {
+  max-width: 1500px;
+  margin: 60px auto;
+  padding: 0 20px 60px;
+}
+
+.blog-section h2 {
+  font-size: 2rem;
+  color: #6b21a8;
+  margin-bottom: 40px;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* Grid bố cục */
+.blog-grid {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  scroll-snap-type: x mandatory;
+}
+
+.blog-card {
+  min-width: 320px; /* Chiều rộng cố định mỗi card */
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Ảnh blog */
+.blog-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover .blog-image {
+  transform: scale(1.03);
+}
+
+/* Nội dung bài blog */
+.blog-info {
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+/* Meta: ngày và tác giả */
+.blog-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.blog-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.blog-meta i {
+  color: #7c3aed;
+}
+
+/* Tiêu đề */
+.blog-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 12px 0;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Link xem thêm */
+.blog-link {
+  margin-top: auto;
+  color: #7c3aed;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.blog-link:hover {
+  text-decoration: underline;
+  color: #5b21b6;
+}
+.blog-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.blog-grid::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 4px;
+}
+
+.blog-grid::-webkit-scrollbar-track {
+  background-color: #f9fafb;
+}
   

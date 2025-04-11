@@ -1,15 +1,15 @@
-/* --- Hero Section --- */
+/* --- Hero Section ---*/
 .div mau{
     background: #f4a261; /* Màu cam nhạt */
     width: 100%;
     padding: 2rem 0;
   }
-  .hero-section {
+  /* .hero-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2rem 1rem;
-  }
+  } */
   
   @media (min-width: 768px) {
     .hero-section {
@@ -46,9 +46,10 @@
   
   /* --- Image in Hero --- */
   .aa {
-    width: 60%;
+    width: 100%;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     float: right; /* Di chuyển hình ảnh sang góc phải */
     margin-left: 20px; /* Thêm khoảng cách giữa hình ảnh và nội dung bên trái */
   }
+

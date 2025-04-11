@@ -10,8 +10,8 @@ import "./KhoaHoc.css";
 const KhoaHoc = () => {
   return (
     <>
-    <div></div>
-      <section className="flex flex-col items-center text-center px-8 py-16">
+
+      <section className="khoahoc-section">
         <div className="max-w-lg">
           <ul>
             <li>
@@ -30,11 +30,12 @@ const KhoaHoc = () => {
         </div>
         <div className="anh mt-6">
           <img src={anh2} alt="C Course Banner" className="w-full max-w-sm" />
+          <button className="register-btn">Đăng ký</button>
         </div>
       </section>
 
       {/* Khóa học C++ */}
-      <section className="flex flex-col md:flex-row items-center px-8 py-16">
+      <section className="khoahoc-section">
         <div className="max-w-lg">
           <ul>
             <li>
@@ -53,11 +54,12 @@ const KhoaHoc = () => {
         </div>
         <div className="anh">
           <img src={anh1} alt="C++ Course Banner" className="w-full max-w-sm" />
+          <button className="register-btn">Đăng ký</button>
         </div>
       </section>
 
       {/* Khóa học HTML */}
-      <section className="flex flex-col md:flex-row items-center px-8 py-16">
+      <section className="khoahoc-section">
         <div className="max-w-lg">
           <ul>
             <li>
@@ -76,11 +78,12 @@ const KhoaHoc = () => {
         </div>
         <div className="anh">
           <img src={anh3} alt="HTML Course Banner" className="w-full max-w-sm" />
+          <button className="register-btn">Đăng ký</button>
         </div>
       </section>
 
       {/* Khóa học ReactJS */}
-      <section className="flex flex-col md:flex-row items-center px-8 py-16">
+      <section className="khoahoc-section">
         <div className="max-w-lg">
           <ul>
             <li>
@@ -99,11 +102,12 @@ const KhoaHoc = () => {
         </div>
         <div className="anh">
           <img src={anh4} alt="ReactJS Course Banner" className="w-full max-w-sm" />
+          <button className="register-btn">Đăng ký</button>
         </div>
       </section>
 
       {/* Khóa học JavaScript */}
-      <section className="flex flex-col md:flex-row items-center px-8 py-16">
+      <section className="khoahoc-section">
         <div className="max-w-lg">
           <ul>
             <li>
@@ -122,11 +126,12 @@ const KhoaHoc = () => {
         </div>
         <div className="anh">
           <img src={anh6} alt="JavaScript Course Banner" className="w-full max-w-sm" />
+          <button className="register-btn">Đăng ký</button>
         </div>
       </section>
 
       {/* Khóa học NodeJS */}
-      <section className="flex flex-col md:flex-row items-center px-8 py-16">
+      <section className="khoahoc-section">
         <div className="max-w-lg">
           <ul>
             <li>
@@ -146,8 +151,10 @@ const KhoaHoc = () => {
         </div>
         <div className="anh">
           <img src={anh5} alt="NodeJS Course Banner" className="w-500px max-w-sm" />
+          <button className="register-btn">Đăng ký</button>
         </div>
       </section>
+
     </>
   );
 };

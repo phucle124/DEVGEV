@@ -1,7 +1,7 @@
 import React from "react";
 import icon from "../img/icon1.jpg";
 import devgen from "../img/DevGen.png";
-import { FaHome } from "react-icons/fa";
+import { FaHome,FaShoppingCart } from "react-icons/fa";
 import "./Header.css"; 
 
 
@@ -28,12 +28,20 @@ const Header = () => {
       <li><a href="./Register">KÍCH HOẠT TÀI KHOẢN</a></li>
     </ul>
   </nav>
+  <button className="cart-button">
+        <FaShoppingCart size={10} />
+        <span className="cart-count"></span> {/* Số lượng sản phẩm */}
+      </button>
 
   {/* Nút đăng nhập */}
+  
   <a href="./Login">
     <button className="login-button">ĐĂNG NHẬP</button>
   </a>
+
+
 </header>
+
 
     
     

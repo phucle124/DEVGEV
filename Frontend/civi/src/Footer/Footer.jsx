@@ -6,9 +6,13 @@ import {
 import "./Footer.css"; 
 
 
+
 const Footer = () => {
   return (
+    
     <footer className="bg-gray-200 text-gray-700 py-6 px-8">
+       <div className="image-container">
+  </div>
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
         {/* Thông tin liên hệ */}
         <div>

@@ -18,10 +18,10 @@ const Main = () => {
         </ul>
       </div>
       {/* Hình ảnh bên phải */}
-      <div className="anh">
         <img src={anh2} alt="Exam Banner" className="aa" />
-      </div>
     </section>
+    
+   
   );
 };
 
