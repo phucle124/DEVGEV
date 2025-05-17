@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import './ChatWidget.css';
+import Lottie from "lottie-react";
+import robotAnimation from "./robot-animation.json"; // animation robot
 
 const ChatWidget = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
+  const [isOpen, setIsOpen] = useState(false);
 
-  // Hàm gửi tin nhắn đến backend Node.js
   const sendMessage = async (userMessage) => {
     try {
       const res = await fetch('http://localhost:3001/api/chat', {
@@ -31,7 +33,6 @@ const ChatWidget = () => {
     const botReply = await sendMessage(userMessage);
     setMessages(prev => [...prev, { sender: 'bot', text: botReply }]);
 
-    // 👇 Gửi log lên Zapier thông qua backend
     try {
       await fetch('http://localhost:3001/api/chat/log', {
         method: 'POST',
@@ -47,26 +48,43 @@ const ChatWidget = () => {
   };
 
   return (
-    <div className="chat-widget">
-      <div className="messages">
-        {messages.map((msg, idx) => (
-          <div key={idx} className={`message ${msg.sender}`}>
-            {msg.text}
+    <div className={`chat-widget-container ${isOpen ? 'open' : 'closed'}`}>
+      <div className="chat-toggle" onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? (
+          <img
+            src="https://www.freeiconspng.com/uploads/minimize-icon-21.png"
+            alt="Minimize"
+            className="toggle-icon"
+          />
+        ) : (
+          <Lottie animationData={robotAnimation} loop={true} className="lottie-icon" />
+        )}
+      </div>
+
+      {isOpen && (
+        <div className="chat-widget">
+          <div className="messages">
+            {messages.map((msg, idx) => (
+              <div key={idx} className={`message ${msg.sender}`}>
+                {msg.text}
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-      <div className="input-area">
-        <input
-          type="text"
-          placeholder="Nhập tin nhắn..."
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyDown={(e) => e.key === 'Enter' && handleSend()}
-        />
-        <button onClick={handleSend}>Gửi</button>
-      </div>
+          <div className="input-area">
+            <input
+              type="text"
+              placeholder="Nhập tin nhắn..."
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && handleSend()}
+            />
+            <button onClick={handleSend}>Gửi</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
 export default ChatWidget;
+

@@ -42,7 +42,7 @@ const Main1 = () => {
     <div className="hero-content">
       <h2>Chia sẻ khoá học  DEVGEN</h2>
       <p>
-        Web <strong>DEVGENDEVGEN</strong> là website hàng đầu về chia sẻ khoá học
+        Web <strong>DEVGEN</strong> là website hàng đầu về chia sẻ khoá học
         online được học qua Google Drive. Mọi khoá học mua tại đây sẽ được học
         vĩnh viễn, luôn có đội ngũ hỗ trợ 24/7.
       </p>

@@ -3,10 +3,10 @@ const express = require("express");
 const cors = require("cors");
 const mysql = require("mysql2");
 
-const authRoutes = require("./routes/authRoutes");
-const userRoutes = require("./routes/userRoutes");
-const courseRoutes = require("./routes/courseRoutes");
-const examRoutes = require("./routes/examRoutes");
+const authRoutes = require("./Backend/routes/authRoutes");
+const userRoutes = require("./Backend/routes/userRoutes");
+// const courseRoutes = require("./Backend/routes/courseRoutes");
+// const examRoutes = require("./Backend/routes/examRoutes");
 
 const app = express();
 app.use(cors());
@@ -18,6 +18,7 @@ const db = mysql.createConnection({
   user: process.env.DB_USER,
   password: process.env.DB_PASS,
   database: process.env.DB_NAME,
+  port: process.env.SERVER_PORT
 });
 
 db.connect((err) => {
@@ -31,10 +32,10 @@ db.connect((err) => {
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
-app.use("/api/courses", courseRoutes);
-app.use("/api/exams", examRoutes);
+// app.use("/api/courses", courseRoutes);
+// app.use("/api/exams", examRoutes);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.SERVER_PORT;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
